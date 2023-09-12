@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Spice Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        .home{
+            width:87%;
+            height:900px;
+            margin:auto;
+            background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(background_image.jpg);
+        }
+        .home nav{
+            height: 80px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:5px;
+        }
+        .home nav .logo{
+            width:300px;
+            display:flex;
+            padding:5px;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .home nav .logo h1{
+            font-size: 42px;
+            color:rgb(223, 115, 0);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+        }
+        .home nav .links ul{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            padding:10px;
+        }
+        .links li{
+            margin-right:30px;
+        }
+        .links li a{
+            text-decoration: none;
+            color:white;
+            font-size: 16px;
+            font-weight:300;
+            letter-spacing: 1px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+        .links li a:hover{
+            color:rgb(255, 151, 39);
+            transition: 0.3s ease-out;
+        }
+        .links ul li a button{
+            padding: 10px 30px;
+            background-color:rgb(223, 115, 0);
+            color:white;
+            outline: none;
+            border:none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-family: 'Cinzel', serif;
+        }
+        .links ul li a button:hover{
+            background-color:rgb(255, 149, 0);
+        }
+        ul li:last-child{
+            margin-right: 10px;
+        }
+        .homecontent{
+           margin-top: 15px;
+           display:flex;
+           justify-content:space-between;
+           padding:10px 20px;
+        }
+        .homecontent .quotes{
+            width:650px;
+            height:400px;
+            color:white;
+            margin-top: 160px;
+            margin-left: 5px;
+            font-family: 'Cinzel', serif;
+        }
+        .homecontent .quotes h1{
+            font-size: 60px;
+            letter-spacing: 5px;
+        }
+        .homecontent .quotes p{
+            margin-top: 10px;
+            line-height: 25px;
+            font-size: 17px;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+        .homecontent .quotes button{
+            padding: 15px 35px;
+            background-color:rgb(223, 115, 0);
+            color:white;
+            outline: none;
+            border:none;
+            border-radius: 7px;
+            font-size: 14px;
+            margin-top: 30px;
+            font-size:16px;
+        }
+        .homecontent .quotes button:hover{
+            background-color:rgb(255, 149, 0);
+        }
+        .service{
+            width:87%;
+            display: flex;
+            justify-content: space-between;
+            margin:auto;
+            background-color: rgb(241, 241, 241);
+            padding:30px;
+        }
+        .singlebox{
+            background-color: white;
+            width:300px;
+            height:300px;
+            display: flex;
+            flex-direction: column;
+            padding:30px;
+            justify-content: center;
+            text-align: left;
+            border-radius: 3px;
+
+        }
+        .singlebox h1{
+            margin-top: 20px;
+            text-align: left;
+            font-size: 20px;
+            font-family: 'Cinzel', serif;
+        }
+        .singlebox p{
+            margin-top: 10px;
+            line-height: 25px;
+            color:rgb(89, 89, 89);
+             font-size: 14px;
+            font-family: 'Cinzel', serif;
+        }
+        .singlebox:hover{
+            color:white;
+            transition: 0.4s ease-out;
+            background-color: rgb(255, 158, 48);
+        }
+        .singlebox:hover p{
+            color:white;
+            transition: 0.4s ease-out;
+        }
+        .about{
+            width:87%;
+            height:750px;
+            margin:auto;
+            padding:30px;
+            background-color: rgb(241, 241, 241);
+            display: flex;
+            font-family: 'Cinzel', serif;
+        }
+        .about img{
+            margin:4px;
+        }
+        .images{
+            margin-top:40px;
+            width:60%;
+            position:relative;
+        }
+        .firsttwo{
+            display:flex;
+
+        }
+        .secondtwo{
+            display:flex;
+        }
+        .content{
+            width:40%;
+            margin-top: 100px;
+        }
+        .firsttwo:first-child{
+            position:absolute;
+            top:0px;
+        }
+        .restaurant2{
+            position:absolute;
+            top:70px;
+            left:320px;
+        }
+        .restaurant3{
+            position: absolute;
+            top:320px;
+            left:70px;
+        }
+        .restaurant4{
+            position: absolute;
+            top:320px;
+            left:320px
+        }
+        .firsthead{
+            color:rgb(252, 135, 2);
+        }
+        .ruler{
+            width:120px;
+            position:relative;
+            left:175px;
+            top:-21px;
+            border:1px solid rgb(255, 158, 48);
+        }
+        .secondhead{
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+        .firstpara{
+            width:490px;
+            margin-top: 30px;
+            color:grey;
+            font-size: 16px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+
+        }
+        .secondpara{
+            width:490px;
+            margin-top: 30px;
+            color:grey;
+            font-size: 16px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+        }
+        .tags{
+            display: flex;
+            justify-content: space-between;
+            margin-top:30px;
+            margin-left: -20px;
+        }
+        .tag{
+            display: flex;
+            justify-content: space-around;
+            border-left:5px solid rgb(255, 158, 48);
+            padding:10px;
+            margin-right: 25px;
+        }
+        .tag p{
+            font-size: 22px;
+            margin-right: 20px;
+            line-height: 35px;
+        }
+        .tag .number{
+            font-size: 55px;
+            margin-top: 13px;
+            color:rgb(252, 135, 2);
+        }
+        .about button{
+            padding:20px 40px;
+            margin-top:20px;
+            margin-left: -10px;
+            color:white;     
+            margin-left: -10px;
+            font-size: 16px;
+            outline: none;
+            border:1px sold brown;
+        }
+        .tagname p b{
+            letter-spacing: 1px;
+        }
+        .content button{
+            margin-top:40px;
+            margin-left: -20px;
+            border-radius: 7px;
+            background-color:rgb(252, 135, 2);
+            border:none;
+            letter-spacing: 1px;
+        }
+        .content button:hover{
+            background-color: rgb(254, 154, 39);
+        }
+        .menu{
+            width:87%;
+            height:830px;
+            margin:auto;
+            padding:30px;
+            background-color: rgb(241, 241, 241);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Cinzel', serif;
+        }
+        .header{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top:30px;
+        }
+        .header hr{
+            width:100px;
+            border: 1px solid grey;
+        }
+        .heading1{
+            display:flex;
+            align-items: center;
+        }
+        .heading1 p{
+            margin:0px 20px;
+            font-size: 30px;
+            color:#fc8402;
+        }
+        .heading2{
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        .category{
+            display:flex;
+            margin:20px auto;
+            padding:20px;
+        }
+        .singlecategory{
+            display:flex;
+            margin-right: 15px;
+            padding:20px;
+            font-size: 18px;
+            border-bottom: 3px solid #d7d7d7;
+
+        }
+        .singlecategory:hover{
+            border-bottom: 3px solid #fc8402;
+        }
+        .singlecategory .icon{
+            width:50px;
+            height:50px;
+            margin-right:10px;
+            padding: 6px;
+        }
+        .name::first-line{
+            color:grey;
+        }
+        .items{
+            display:flex;
+            margin-top:20px;
+        }
+        .item1,.item2{
+            width:50%;
+        }
+        .item{
+            display:flex;
+            align-items: center;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        .itemname{
+            margin-left: 20px;
+        }
+        .itemname hr{
+            width:500px;
+        }
+        .nameandprice{
+            display:flex;
+            justify-content: space-between;
+            font-size: 20px;
+            letter-spacing:1px;
+        }
+        em{
+            font-size: 13px;
+            color:grey;
+        }
+        .contact{
+            width:87%;
+            height:500px;
+            margin:0px auto;
+            background-color: rgb(241, 241, 241);
+            display: flex;
+            font-family: 'Cinzel', serif;
+        }
+        .video{
+            width:50%;
+            height: 500px;
+        }
+        .video iframe{
+            height:100%;
+            width:100%;
+        }
+        .formcontent{
+            width:50%;
+            padding:30px;
+            background-color: rgb(20, 20, 59);
+            color:rgb(252, 132, 2);
+        }
+        .formcontent .formhead1{
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+        }
+        .formhead1 hr{
+            width:60px;
+            margin-left: 10px;
+            border:1px solid rgb(255, 255, 255)
+        }
+        .formcontent .formhead2{
+            margin-top: 20px;
+            font-size: 45px;
+        }
+        .formcontent .form{
+            margin-top:30px;
+            display:flex;
+            flex-direction: column;
+        }
+        
+        input{
+            width:270px;
+            height:50px;
+            margin-left:15px;
+            margin-top:15px;
+            padding:10px;
+            font-size: 18px;
+            border:none;
+        }
+        .textarea{
+            width:560px;
+            height:60px;
+            margin-bottom:15px;;
+        }
+        .booknow{
+            margin: 10px;
+            padding:20px 30px;
+            width:565px;
+            height:60px;
+            background-color: #fc8402;
+            color:white;
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        .booknow:hover{
+            background-color:rgb(254, 154, 39); ;
+        }
+        .chefs{
+            width:87%;
+            height:650px;
+            margin:0px auto;
+            background-color: rgb(241, 241, 241);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Cinzel', serif;
+        }
+        .photos{
+            display: flex;
+            padding: 30px;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .photo{
+            width:280px;
+            height:400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            line-height: 30px;
+            padding-top:20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .photo img{
+            width:230px;
+            height:230px;
+            border-radius: 50%;
+            margin: 0px auto;
+            margin-bottom: 20px;
+        }
+        .photo h1{
+            font-size: 23px;
+        }
+        .photo:hover img{
+            transform:scale(1.1);
+            transition: 2s;
+        }
+        .smalllogos{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            display: none;
+            transition: 3s;
+
+        }
+        .smalllogos p{
+            width:30px;
+            height:60px;
+            background-color: #fc8402;
+            margin: 0 auto;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+        }
+        .footer{
+            width:87%;
+            height:400px;
+            margin:0px auto;
+            background-color: rgb(26, 23, 63);
+            display: flex;
+            font-family: 'Cinzel', serif;
+            padding:50px;
+        }
+        .footerhead{
+            display: flex;
+            align-items:center;
+            color:rgb(252, 132, 2);
+            font-size:15px;
+            margin-bottom: 30px;
+        }
+        .footerhead hr{
+            width:70px;
+            border:1px solid rgb(252, 132, 2);
+            margin-left: 10px;
+        }
+        .company{
+            line-height: 30px;
+            padding: 30px;
+        }
+        .company p{
+            font-size: 15px;
+            color:white;
+        }
+        .fcontact{
+            font-size: 15px;
+            color:white;
+            line-height: 30px;
+            padding: 30px;
+        }
+        .fcontact h1 div{
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .fcontact h1 div p{
+            margin-right: 10px;
+        }
+        .opening{
+            font-size: 15px;
+            color:white;
+            line-height: 30px;
+            padding: 30px;
+        }
+        .newsletter{
+            font-size: 14px;
+            color:white;
+            line-height: 30px;
+            padding: 30px;
+            position: relative;
+        }
+        .newsletter button{
+            padding:6px 10px;
+            border:none;
+            position:absolute;
+            top:175px;
+            right:45px;
+            background-color: #fc8402;
+            color:white;
+        }
+        .newsletter input{
+            border:none;
+            outline: none;
+            color:grey;
+        }
+        .homecontent .image{
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <nav>
+            <div class="logo">
+                <img src="/logo.png" alt="" width="64" height="64">
+                <h1>Mr.Spice</h1>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">PAGES</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href=""><button class="bookbutton">BOOK A TABLE</button></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="homecontent">
+            <div class="quotes">
+                <h1>Enjoy Our </h1>
+                <h1>Delicious Meal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure a rerum consectetur incidunt, illum aut assumenda quasi tempore accusamus amet. Voluptatum alias, veritatis odio a rerum ut beatae cum aspernatur minus dolorum ex culpa iste totam quo qui consectetur non?</p>
+                <button class="bookbutton">BOOK A TABLE</button>
+            </div>
+            <div class="image">
+                <img src="rotate_image.png" alt="rotate_image" height="600" width="600"> 
+            </div>
+        </div>
+    </div>
+    <div class="service">
+        <div class="singlebox">
+            <img src="user-tie-solid.svg" alt="" width="50">
+            <h1>master chefs</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quas blanditiis enim. Distinctio, illum quisquam?</p>
+        </div>
+        <div class="singlebox">
+            <img src="utensils-solid (1).svg" alt="" width="50">
+            <h1>quality food</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse placeat et quidem iusto distinctio tenetur?</p>
+        </div>
+        <div class="singlebox">
+            <img src="cart-shopping-solid.svg" alt="" width="50">
+            <h1>online order</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint veritatis doloribus perspiciatis sed commodi at?</p>
+        </div>
+        <div class="singlebox">
+            <img src="headphones-solid.svg" alt="" width="50">
+            <h1>24/7 service</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi nisi laboriosam repudiandae fuga! Iure, nulla!</p>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="images">
+            <div class="firsttwo">
+                <img src="restaurant1.jpg" alt="restaurant1" width="300px" height="300">
+                <img src="restaurant2.jpg" alt="restaurant2" width="230" height="230" class="restaurant2">
+            </div>
+            <div class="secondtwo">
+                <img src="restaurant3.jpg" alt="restaurant3" width="230" height="230" class="restaurant3">
+                <img src="restaurant4.jpg" alt="restaurant4" width="300px" height="300" class="restaurant4">
+            </div>
+            
+        </div>
+        <div class="content">
+            <h1 class="firsthead">about Us</h1>
+            <hr class="ruler">
+            <h1 class="secondhead"> WELCOME TO MR.SPICE</h1>
+            <p class="firstpara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga minus unde adipisci nemo impedit repellendus officia modi qui. Modi, deleniti?</p>
+            <p class="secondpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ipsam! Quibusdam maxime reiciendis expedita, animi sint deleniti sunt unde. Corporis esse alias illo sapiente illum, impedit rerum consectetur veritatis omnis?</p>
+            <div class="tags">
+                <div class="tag">
+                    <p class="number">15</p>
+                    <div class="tagname">
+                        <p><b>Years of</b></p>
+                        <p><b>EXPERIENCE</b></p>
+                    </div>
+                </div>
+                <div class="tag">
+                    <p class="number">15</p>
+                    <div class="tagname">
+                        <p><b>Years of</b></p>
+                        <p><b>EXPERIENCE</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button>READ MORE</button>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="header">
+            <div class="heading1">
+                <hr>
+                <p>Food Menu</p>
+                <hr>
+            </div>
+            <div class="heading2">
+                <h1>Most Popular Items</h1>
+            </div>
+        </div>
+        <div class="category">
+            <div class="singlecategory">
+                <div class="icon">
+                    <i class="fa-solid fa-mug-saucer" style="color: #fc8402;font-size: 37px;"></i>
+                </div>
+                <div class="name">
+                    <p>Popular</p>
+                    <p>Breakfast</p>
+                </div>
+            </div>
+            <div class="singlecategory">
+                <div class="icon">
+                    <i class="fa-solid fa-burger" style="color: #fc8402;font-size: 37px;"></i>
+                </div>
+                <div class="name">
+                    <p>Special</p>
+                    <p>Lunch</p>
+                </div>
+            </div>
+            <div class="singlecategory">
+                <div class="icon">
+                    <i class="fa-solid fa-utensils" style="color: #fc8402;font-size: 37px;"></i>
+                </div>
+                <div class="name">
+                    <p>Lovely</p>
+                    <p>Dinner</p>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="item1">
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-1.jpg" alt="menu-8">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-7.jpg" alt="menu-1">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-2.jpg" alt="menu-2">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-3.jpg" alt="menu-3">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-4.jpg" alt="menu-4">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-5.jpg" alt="menu-5">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-6.jpg" alt="menu-6">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="itemimage">
+                        <img src="menu-8.jpg" alt="menu-7">
+                    </div>
+                    <div class="itemname">
+                        <div class="nameandprice">
+                            <p><b>Chicken Burger</b></p>
+                            <p style="color:#000000;font-weight: 1000;">$115</p>
+                        </div>
+                        <hr>
+                        <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tJlzIJaokVY?si=Q7zoRr8vH1GwtqLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="formcontent">
+            <div class="formhead1">
+                <p>Reservation</p>
+                <hr>
+            </div>
+            <div class="formhead2">book A Table Online</div>
+            <div class="form">
+                <div>
+                    <input type="text" name="your name" placeholder="Your Name">
+                    <input type="email" name="your email" placeholder="Your Email">
+                </div>
+                <div>
+                    <input type="datetime-local" placeholder="Date & Time">
+                    <input list="peoples" placeholder="People 1">
+                    <datalist id="peoples">
+                        <option value="People 1" selected></option>
+                        <option value="People 2"></option>
+                        <option value="People 3"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <input type="textarea" class="textarea">
+                </div>
+            </div>
+            <button class="booknow">BOOK NOW</button>
+        </div>
+    </div>
+    <div class="chefs">
+        <div class="header">
+            <div class="heading1">
+                <hr>
+                <p>Team Members</p>
+                <hr>
+            </div>
+            <div class="heading2">
+                <h1>Our Master Chefs</h1>
+            </div>
+        </div>
+        <div class="photos">
+            <div class="photo">
+                <img src="team-1.jpg" alt="team-1" width="200" height="200">
+                <h1>Full Name</h1>
+                <p>Designation</p>
+                <div class="smalllogos">
+                    <p><i class="fa-brands fa-facebook" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-twitter" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-instagram" style="color: #fc8402;"></i></p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="team-2.jpg" alt="team-2" width="200" height="200">
+                <h1>Full Name</h1>
+                <p>Designation</p>
+                <div class="smalllogos">
+                    <p><i class="fa-brands fa-facebook" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-twitter" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-instagram" style="color: #fc8402;"></i></p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="team-3.jpg" alt="team-3" width="200" height="200">
+                <h1>Full Name</h1>
+                <p>Designation</p>
+                <div class="smalllogos">
+                    <p><i class="fa-brands fa-facebook" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-twitter" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-instagram" style="color: #fc8402;"></i></p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="team-4.jpg" alt="team-4" width="200" height="200">
+                <h1>Full Name</h1>
+                <p>Designation</p>
+                <div class="smalllogos">
+                    <p><i class="fa-brands fa-facebook" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-twitter" style="color: #fc8402;"></i></p>
+                    <p><i class="fa-brands fa-instagram" style="color: #fc8402;"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="company">
+            <div class="footerhead">
+                <h1>Company</h1>
+                <hr>
+            </div>
+            <p>> About Us</p>
+            <p>> Contact Us</p>
+            <p>> Reservation</p>
+            <p>> Privacy Policy</p>
+            <p>> Terms & Condition</p>
+        </div>
+        <div class="fcontact">
+            <div class="footerhead">
+                <h1>Contact</h1>
+                <hr>
+            </div>
+            <p>123 Street, New York, USA</p>
+            <p>+012 345 67890</p>
+            <p>info@example.com</p>
+            <h1><div><p><i class="fa-brands fa-facebook"></i></p><p><i class="fa-brands fa-twitter"></i></p><p><i class="fa-brands fa-instagram"></i></p><p><i class="fa-brands fa-telegram"></i></p></div></h1>
+        </div>
+        <div class="opening">
+            <div class="footerhead">
+                <h1>Opening</h1>
+                <hr>
+            </div>
+            <p>Monday - Saturday</p>
+            <p>09AM - 09PM</p>
+            <p>Sunday</p>
+            <p>10AM - 08PM</p>
+        </div>
+        <div class="newsletter">
+            <div class="footerhead">
+                <h1>Newsletter</h1>
+                <hr>
+            </div>
+            <p>Dolor amet sit justo amet elitr clita</p>
+            <p>ipsum elitr est.</p>
+            <input type="email"><button type="submit">SIGNUP</button>
+        </div>
+    </div>
+    <script src="js/all.min.js"></script>
+</body>
+</html>
